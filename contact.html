@@ -5,11 +5,28 @@
     <title>Contact & Consultation | Brian Thiboutot</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+<!--
+    WEB DESIGN AND TECHNOLOGIES - CONTACT PAGE
+    FEATURES LISTING:
+    A. First feature: Dynamic World Clock API Integration (index.html)
+    B. Second feature: Interactive Content Filtering (experience.html)
+    C. Third feature: Live Industry News Feed (news.html)
+    D. Fourth feature: Client Consultation Form (contact.html)
+-->
+
+<!-- GLOBAL STRUCTURE TAG: BODY -->
 <body>
+    <!-- GLOBAL STRUCTURE TAG: HEADER -->
     <header>
+        <!-- TEXT TAG: H1 -->
         <h1>Contact & Consultation</h1>
+        <!-- GLOBAL STRUCTURE TAG: NAV -->
         <nav>
+            <!-- GLOBAL STRUCTURE TAG: UL (Unordered List) -->
             <ul>
+                <!-- GLOBAL STRUCTURE TAG: LI (List Item) -->
+                <!-- TEXT TAG: A (Anchor/Link) -->
                 <li><a href="index.html">Home</a></li>
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="credentials.html">Credentials</a></li>
@@ -19,15 +36,27 @@
         </nav>
     </header>
 
+    <!-- GLOBAL STRUCTURE TAG: SECTION -->
     <section class="form-section">
+        <!-- GLOBAL STRUCTURE TAG: DIV -->
         <div class="contact-intro">
+            <!-- TEXT TAG: H2 -->
             <h2>Let's Connect</h2>
+            <!-- TEXT TAG: P (Paragraph) -->
             <p>I am available for strategic program oversight, Agile transformation, or technical infrastructure consulting inquiries.</p>
         </div>
 
+        <!--
+            FEATURE D: Client Consultation Form
+            A structured HTML form with input validation that allows visitors
+            to submit consultation inquiries with name, email, type, and message.
+        -->
+        <!-- GLOBAL STRUCTURE TAG: FORM -->
         <form id="contactForm">
             <div class="form-group">
+                <!-- TEXT TAG: LABEL -->
                 <label for="name">Full Name</label>
+                <!-- TEXT TAG: INPUT -->
                 <input type="text" id="name" placeholder="Enter your name" required>
             </div>
 
@@ -38,7 +67,9 @@
 
             <div class="form-group">
                 <label for="subject">Inquiry Type</label>
+                <!-- TEXT TAG: SELECT -->
                 <select id="subject">
+                    <!-- TEXT TAG: OPTION -->
                     <option value="consultation">Program Consultation</option>
                     <option value="recruitment">Recruitment Inquiry</option>
                     <option value="networking">Professional Networking</option>
@@ -47,9 +78,11 @@
 
             <div class="form-group">
                 <label for="message">Message</label>
+                <!-- TEXT TAG: TEXTAREA -->
                 <textarea id="message" rows="5" placeholder="How can I help with your next program?" required></textarea>
             </div>
 
+            <!-- TEXT TAG: BUTTON -->
             <button type="submit" id="submitBtn">Send Inquiry</button>
             <p id="formFeedback"></p>
         </form>

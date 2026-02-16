@@ -6,11 +6,28 @@
     <title>Professional Experience | Brian H. Thiboutot</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+<!--
+    WEB DESIGN AND TECHNOLOGIES - EXPERIENCE PAGE
+    FEATURES LISTING:
+    A. First feature: Dynamic World Clock API Integration (index.html)
+    B. Second feature: Interactive Content Filtering (experience.html)
+    C. Third feature: Live Industry News Feed (news.html)
+    D. Fourth feature: Client Consultation Form (contact.html)
+-->
+
+<!-- GLOBAL STRUCTURE TAG: BODY -->
 <body>
+    <!-- GLOBAL STRUCTURE TAG: HEADER -->
     <header>
+        <!-- TEXT TAG: H1 -->
         <h1>Professional Experience</h1>
+        <!-- GLOBAL STRUCTURE TAG: NAV -->
         <nav>
+            <!-- GLOBAL STRUCTURE TAG: UL (Unordered List) -->
             <ul>
+                <!-- GLOBAL STRUCTURE TAG: LI (List Item) -->
+                <!-- TEXT TAG: A (Anchor/Link) -->
                 <li><a href="index.html">Home</a></li>
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="credentials.html">Credentials</a></li>
@@ -20,8 +37,17 @@
         </nav>
     </header>
 
+    <!-- GLOBAL STRUCTURE TAG: SECTION -->
     <section>
+        <!--
+            FEATURE B: Interactive Content Filtering
+            JavaScript-driven filter buttons allow visitors to sort professional
+            experience entries by category (Agile/Scrum, Infrastructure,
+            Budget/Program, Managed Services) without reloading the page.
+        -->
+        <!-- GLOBAL STRUCTURE TAG: DIV -->
         <div class="filter-buttons">
+            <!-- TEXT TAG: BUTTON -->
             <button onclick="filterSelection('all')">Show All</button>
             <button onclick="filterSelection('agile')">Agile/Scrum</button>
             <button onclick="filterSelection('infrastructure')">Infrastructure</button>
@@ -31,22 +57,30 @@
 
         <div class="portfolio">
             <div class="item agile managed">
+                <!-- TEXT TAG: H4 -->
                 <h4>Insight | Senior Project Manager (2022 – 2025)</h4>
+                <!-- TEXT TAG: P (Paragraph) -->
                 <p>Leading cross-functional teams in transitioning global clients to managed services using Agile Scrum methodologies.</p>
             </div>
 
             <div class="item managed infrastructure">
+                <!-- TEXT TAG: H4 -->
                 <h4>Konica Minolta | Enterprise Solutions Consultant (2013 – 2017)</h4>
+                <!-- TEXT TAG: P (Paragraph) -->
                 <p>Delivered integrated software/hardware solutions and optimized enterprise workflows in the Phoenix area.</p>
             </div>
 
             <div class="item budget managed infrastructure">
+                <!-- TEXT TAG: H4 -->
                 <h4>Toshiba | Director of Professional Services (2005 – 2013)</h4>
+                <!-- TEXT TAG: P (Paragraph) -->
                 <p>Directed $5.3M integrations and revamped remote service desks, resulting in $2M savings over 5 years.</p>
             </div>
 
             <div class="item budget infrastructure">
+                <!-- TEXT TAG: H4 -->
                 <h4>Toshiba | IT Director (1999 – 2005)</h4>
+                <!-- TEXT TAG: P (Paragraph) -->
                 <p>Oversaw regional IT infrastructure, budget management, and technical team leadership.</p>
             </div>
         </div>
