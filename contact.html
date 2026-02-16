@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact & Consultation | Brian Thiboutot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contact & Consultation</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="credentials.html">Credentials</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="form-section">
+        <div class="contact-intro">
+            <h2>Let's Connect</h2>
+            <p>I am available for strategic program oversight, Agile transformation, or technical infrastructure consulting inquiries.</p>
+        </div>
+
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="email@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Inquiry Type</label>
+                <select id="subject">
+                    <option value="consultation">Program Consultation</option>
+                    <option value="recruitment">Recruitment Inquiry</option>
+                    <option value="networking">Professional Networking</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" placeholder="How can I help with your next program?" required></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn">Send Inquiry</button>
+            <p id="formFeedback"></p>
+        </form>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

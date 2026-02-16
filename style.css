@@ -1,54 +1,100 @@
+/* 1. Global Reset & Foundations */
+* {
+    box-sizing: border-box; /* Fixes layout breaking on inputs/images */
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     color: #333;
-    background: #f8f9fa;
+    background: #f4f7f6;
 }
 
+/* 2. Header & Navigation Fixes */
 header {
     background: #002d62;
     color: white;
-    padding: 3rem 1rem;
+    padding: 30px 15px;
     text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+nav {
+    margin-top: 20px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00; /* Subtle highlight for navigation */
+}
+
+/* 3. Main Content Container */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    min-height: 450px;
+}
+
+/* 4. Home Page: Headshot & Clocks */
+.profile-img {
+    float: right;
+    width: 180px; /* Forces professional size */
+    height: auto;
+    margin: 0 0 20px 20px;
+    border-radius: 8px;
+    border: 3px solid #002d62;
+}
+
+.bio-wrapper::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 #clocks-container {
     display: flex;
     justify-content: space-around;
-    background: #fff;
     padding: 20px;
-    border-bottom: 3px solid #002d62;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #e9ecef;
+    border-radius: 6px;
+    margin-top: 30px;
+    border: 1px solid #dee2e6;
+    font-size: 0.85rem;
+    clear: both;
 }
 
-section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
+/* 5. Experience & Credentials Page styling */
 table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 th, td {
@@ -62,49 +108,45 @@ th {
     color: white;
 }
 
-.portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
 .item {
-    background: white;
-    margin: 10px;
-    padding: 20px;
     border-left: 5px solid #002d62;
-    width: calc(50% - 45px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #fdfdfd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-.filter-buttons {
-    text-align: center;
+/* 6. Form Styling (Friendly & Functional) */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #002d62;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
 button {
     background: #002d62;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 25px;
     cursor: pointer;
-    margin: 5px;
+    font-weight: bold;
     border-radius: 4px;
+    width: 100%;
 }
 
 button:hover {
-    background: #004a99;
-}
-
-form {
-    background: white;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-input, textarea {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    background: #004085;
 }
