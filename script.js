@@ -1,4 +1,17 @@
-// Function to update the world clocks
+/*
+    WEB DESIGN AND TECHNOLOGIES - JAVASCRIPT
+    FEATURES LISTING:
+    A. First feature: Dynamic World Clock API Integration (updateClocks function)
+    B. Second feature: Interactive Content Filtering (filterSelection function)
+    C. Third feature: Live Industry News Feed (fetchTechNews function)
+    D. Fourth feature: Client Consultation Form (form handled in contact.html)
+*/
+
+/*
+    FEATURE A: Dynamic World Clock API Integration
+    Uses the Intl.DateTimeFormat API to display real-time clocks for
+    four global operations centers. Refreshes automatically every 60 seconds.
+*/
 function updateClocks() {
     const container = document.getElementById('clocks-container');
     if (!container) return; // Exit if not on the Home page
@@ -21,7 +34,12 @@ function updateClocks() {
     container.innerHTML = clockHTML;
 }
 
-// NEW/REVISED: Function to filter the experience page
+/*
+    FEATURE B: Interactive Content Filtering
+    Allows visitors to filter professional experience entries by category
+    (Agile/Scrum, Infrastructure, Budget/Program, Managed Services)
+    by toggling element visibility based on CSS class names.
+*/
 function filterSelection(category) {
     const items = document.getElementsByClassName("item");
     if (items.length === 0) return;
@@ -41,7 +59,11 @@ function filterSelection(category) {
     }
 }
 
-// Function to fetch tech news (for news.html)
+/*
+    FEATURE C: Live Industry News Feed
+    Fetches real-time technology headlines from an external REST API
+    (ok.surf news-feed) and renders the top 5 articles dynamically.
+*/
 async function fetchTechNews() {
     const newsContainer = document.getElementById('news-list');
     if (!newsContainer) return;
@@ -65,15 +87,15 @@ async function fetchTechNews() {
 
 // EVENT LISTENERS - This ensures the code runs immediately on load
 document.addEventListener('DOMContentLoaded', () => {
-    // Run the clocks immediately
+    // FEATURE A: Run the clocks immediately
     updateClocks();
     // Refresh the clocks every 60 seconds
     setInterval(updateClocks, 60000);
     
-    // Check if we are on the news page
+    // FEATURE C: Check if we are on the news page
     fetchTechNews();
     
-    // Initialize Experience page to show all by default
+    // FEATURE B: Initialize Experience page to show all by default
     if (document.getElementsByClassName("item").length > 0) {
         filterSelection('all');
     }
