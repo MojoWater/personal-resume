@@ -99,4 +99,49 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementsByClassName("item").length > 0) {
         filterSelection('all');
     }
+
+    /*
+        FEATURE D: Client-Side Form Validation
+        Intercepts the submit event and performs conditional checks
+        on all required fields. Uses a Regular Expression (Regex) to
+        validate email structure before allowing submission.
+    */
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const feedback = document.getElementById('formFeedback');
+
+            // Regex pattern for validating email structure
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Conditional checks for required fields
+            if (name === '') {
+                feedback.textContent = 'Please enter your full name.';
+                feedback.style.color = 'red';
+                return;
+            }
+
+            if (!emailRegex.test(email)) {
+                feedback.textContent = 'Please enter a valid email address.';
+                feedback.style.color = 'red';
+                return;
+            }
+
+            if (message === '') {
+                feedback.textContent = 'Please enter a message.';
+                feedback.style.color = 'red';
+                return;
+            }
+
+            // All checks passed - display success
+            feedback.textContent = 'Thank you, ' + name + '! Your inquiry has been submitted.';
+            feedback.style.color = 'green';
+            contactForm.reset();
+        });
+    }
 });

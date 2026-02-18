@@ -1,8 +1,18 @@
+/*
+    WEB DESIGN AND TECHNOLOGIES - STYLE SPECIFICATIONS
+    FEATURES LISTING:
+    A. First feature: Dynamic World Clock API Integration (index.html)
+    B. Second feature: Interactive Content Filtering (experience.html)
+    C. Third feature: Live Industry News Feed (news.html)
+    D. Fourth feature: Client Consultation Form (contact.html)
+*/
+
 /* 1. Global Reset & Foundations */
 * {
     box-sizing: border-box; /* Fixes layout breaking on inputs/images */
 }
 
+/* GLOBAL STRUCTURE TAG: BODY */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -11,7 +21,7 @@ body {
     background: #f4f7f6;
 }
 
-/* 2. Header & Navigation Fixes */
+/* 2. GLOBAL STRUCTURE TAG: HEADER & NAV */
 header {
     background: #002d62;
     color: white;
@@ -20,15 +30,18 @@ header {
     width: 100%;
 }
 
+/* TEXT TAG: H1 */
 header h1 {
     margin: 0;
     font-size: 2.2rem;
 }
 
+/* GLOBAL STRUCTURE TAG: NAV */
 nav {
     margin-top: 20px;
 }
 
+/* GLOBAL STRUCTURE TAG: UL (Unordered List) */
 nav ul {
     list-style: none;
     padding: 0;
@@ -38,6 +51,7 @@ nav ul {
     gap: 20px;
 }
 
+/* TEXT TAG: A (Anchor/Link) */
 nav a {
     color: white;
     text-decoration: none;
@@ -51,7 +65,7 @@ nav a:hover {
     color: #ffcc00; /* Subtle highlight for navigation */
 }
 
-/* 3. Main Content Container */
+/* 3. GLOBAL STRUCTURE TAG: SECTION */
 section {
     padding: 40px 20px;
     max-width: 900px;
@@ -63,6 +77,7 @@ section {
 }
 
 /* 4. Home Page: Headshot & Clocks */
+/* TEXT TAG: IMG */
 .profile-img {
     float: right;
     width: 180px; /* Forces professional size */
@@ -72,12 +87,14 @@ section {
     border: 3px solid #002d62;
 }
 
+/* GLOBAL STRUCTURE TAG: DIV (bio-wrapper clearfix) */
 .bio-wrapper::after {
     content: "";
     clear: both;
     display: table;
 }
 
+/* FEATURE A: Dynamic World Clock container styling */
 #clocks-container {
     display: flex;
     justify-content: space-around;
@@ -90,13 +107,14 @@ section {
     clear: both;
 }
 
-/* 5. Experience & Credentials Page styling */
+/* 5. GLOBAL STRUCTURE TAG: TABLE (Credentials page) */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
 }
 
+/* TEXT TAG: TH (Table Header) */
 th, td {
     padding: 12px;
     border: 1px solid #ddd;
@@ -108,6 +126,7 @@ th {
     color: white;
 }
 
+/* FEATURE B: Interactive Content Filtering - experience item styling */
 .item {
     border-left: 5px solid #002d62;
     padding: 15px;
@@ -116,11 +135,13 @@ th {
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* 6. Form Styling (Friendly & Functional) */
+/* 6. FEATURE D: Client Consultation Form styling */
+/* GLOBAL STRUCTURE TAG: FORM */
 .form-group {
     margin-bottom: 15px;
 }
 
+/* TEXT TAG: LABEL */
 label {
     display: block;
     font-weight: bold;
@@ -128,6 +149,7 @@ label {
     color: #002d62;
 }
 
+/* TEXT TAG: INPUT, TEXTAREA, SELECT */
 input, textarea, select {
     width: 100%;
     padding: 12px;
@@ -136,6 +158,7 @@ input, textarea, select {
     font-size: 1rem;
 }
 
+/* TEXT TAG: BUTTON */
 button {
     background: #002d62;
     color: white;
